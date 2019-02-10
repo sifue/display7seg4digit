@@ -175,29 +175,29 @@ def showInt(i):
         selectNumber(0)
         time.sleep(INTERVAL * 4)
     elif i > 0:
-        if i > 1000:
+        if i >= 1000:
             reset()
             enableDigit(1)
             selectNumber(i // 1000)
             time.sleep(INTERVAL)
-        if i > 100:
+        if i >= 100:
             reset()
             enableDigit(2)
             selectNumber(i // 100)
         time.sleep(INTERVAL)
-        if i > 10:
+        if i >= 10:
             reset()
             enableDigit(3)
             selectNumber(i // 10)
         time.sleep(INTERVAL)
-        if i > 1:
+        if i >= 1:
             reset()
             enableDigit(4)
             selectNumber(i)
         time.sleep(INTERVAL)
     elif i < 0:
         i = -i
-        if i > 100:
+        if i >= 100:
             reset()
             enableDigit(1)
             selectMinus()
@@ -214,7 +214,7 @@ def showInt(i):
             enableDigit(4)
             selectNumber(i)
             time.sleep(INTERVAL)
-        elif i > 10:
+        elif i >= 10:
             reset()
             time.sleep(INTERVAL)
             reset()
@@ -229,7 +229,7 @@ def showInt(i):
             enableDigit(4)
             selectNumber(i)
             time.sleep(INTERVAL)
-        elif i > 1:
+        elif i >= 1:
             reset()
             time.sleep(INTERVAL * 2)
             reset()
